@@ -6069,7 +6069,7 @@ void homeform::setGeneralPopupVisible(bool value) {
     emit generalPopupVisibleChanged(m_generalPopupVisible);
 }
 
-bool homeform::licensePopupVisible() { return m_LicensePopupVisible; }
+bool homeform::licensePopupVisible() { return false; }
 
 void homeform::setLicensePopupVisible(bool value) {
 
@@ -6645,7 +6645,7 @@ void homeform::licenseRequest() {
     });
 }
 
-void homeform::licenseTimeout() { setLicensePopupVisible(true); }
+void homeform::licenseTimeout() { setLicensePopupVisible(false); }
 #endif
 
 void homeform::changeTimestamp(QTime source, QTime actual) {
